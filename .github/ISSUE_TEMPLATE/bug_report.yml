@@ -62,7 +62,7 @@ body:
       label: "Среда выполнения"
       description: "Выберите среду, в которой возник дефект."
       options:
-        - "Windows 10"
+        - "Windows 11"
         - "macOS"
         - "Linux"
         - "Android"
@@ -74,7 +74,7 @@ body:
     id: severity
     attributes:
       label: "Опасность"
-      description: "Выберите уровень серьезности дефекта."
+      description: "Выберите уровень опасноти дефекта."
       options:
         - "Низкая"
         - "Средняя"
