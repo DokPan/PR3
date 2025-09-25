@@ -1,0 +1,42 @@
+name: "Шаблон отчета о дефекте"
+description: "Используйте этот шаблон для создания отчетов о дефектах."
+title: "[Ошибка]: "
+labels: ["bug"]
+
+body:
+ - type: textarea
+ id: defect_description
+ attributes:
+ label: "Описание дефекта"
+ description: "Подробное описание проблемы, с которой вы столкнулись."
+ placeholder: "Опишите дефект здесь..."
+ validations:
+ required: true
+ 
+ - type: dropdown
+ id: severity
+ attributes:
+ label: "Опасность"
+ description: "Выберите уровень опасности дефекта."
+ options:
+        - "Низкая"
+        - "Средняя"
+        - "Высокая"
+ validations:
+ required: true
+ 
+ - type: markdown
+ attributes:
+ value: |
+ Пожалуйста, предоставьте как можно больше информации о дефекте, чтобы помочь нам его исправить.
+ 
+ - type: checkboxes
+ id: reproduction_steps
+ attributes:
+ label: "Шаги для воспроизведения"
+ description: "Выберите шаги, которые вы выполнили для воспроизведения дефекта."
+ options:
+        - label: "Шаг 1: Открыть приложение"
+        - label: "Шаг 2: Ввести данные"
+        - label: "Шаг 3: Нажать кнопку"
+ required: true
