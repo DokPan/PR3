@@ -73,7 +73,7 @@ body:
   - type: dropdown
     id: severity
     attributes:
-      label: "Приоритет / Серьезность"
+      label: "Опасность"
       description: "Выберите уровень серьезности дефекта."
       options:
         - "Низкая"
