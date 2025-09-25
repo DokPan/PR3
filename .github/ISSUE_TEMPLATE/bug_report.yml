@@ -5,18 +5,75 @@ labels: ["bug"]
 
 body:
   - type: textarea
+    id: defect_title
+    attributes:
+      label: "Заголовок"
+      description: "Краткое описание проблемы."
+      placeholder: "Введите заголовок дефекта..."
+    validations:
+      required: true
+
+  - type: textarea
     id: defect_description
     attributes:
-      label: "Описание дефекта"
+      label: "Описание"
       description: "Подробное описание проблемы, с которой вы столкнулись."
       placeholder: "Опишите дефект здесь..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction_steps
+    attributes:
+      label: "Шаги воспроизведения"
+      description: "Опишите шаги, которые необходимо выполнить для воспроизведения дефекта."
+      placeholder: "Введите шаги воспроизведения..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected_result
+    attributes:
+      label: "Ожидаемый результат"
+      description: "Опишите, что должно произойти."
+      placeholder: "Введите ожидаемый результат..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual_result
+    attributes:
+      label: "Фактический результат"
+      description: "Опишите, что произошло на самом деле."
+      placeholder: "Введите фактический результат..."
+    validations:
+      required: true
+
+  - type: textarea
+    id: additional_materials
+    attributes:
+      label: "Скриншоты / Доп. материалы"
+      description: "Прикрепите скриншоты или дополнительные материалы, если есть."
+      placeholder: "Введите ссылки на скриншоты или дополнительные материалы..."
+  
+  - type: dropdown
+    id: environment
+    attributes:
+      label: "Среда выполнения"
+      description: "Выберите среду, в которой возник дефект."
+      options:
+        - "Windows 10"
+        - "macOS"
+        - "Linux"
+        - "Android"
+        - "iOS"
     validations:
       required: true
 
   - type: dropdown
     id: severity
     attributes:
-      label: "Серьезность"
+      label: "Приоритет / Серьезность"
       description: "Выберите уровень серьезности дефекта."
       options:
         - "Низкая"
@@ -29,15 +86,3 @@ body:
     attributes:
       value: |
         Пожалуйста, предоставьте как можно больше информации о дефекте, чтобы помочь нам его исправить.
-
-  - type: checkboxes
-    id: reproduction_steps
-    attributes:
-      label: "Шаги для воспроизведения"
-      description: "Выберите шаги, которые вы выполнили для воспроизведения дефекта."
-      options:
-        - label: "Шаг 1: Открыть приложение"
-        - label: "Шаг 2: Ввести данные"
-        - label: "Шаг 3: Нажать кнопку"
-    validations:
-      required: true
