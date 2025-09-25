@@ -4,7 +4,7 @@ title: "[Ошибка]: "
 labels: ["bug"]
 
 body:
- - type: textarea
+- type: textarea
  id: defect_description
  attributes:
  label: "Описание дефекта"
@@ -13,7 +13,7 @@ body:
  validations:
  required: true
  
- - type: dropdown
+- type: dropdown
  id: severity
  attributes:
  label: "Опасность"
@@ -25,12 +25,12 @@ body:
  validations:
  required: true
  
- - type: markdown
+- type: markdown
  attributes:
  value: |
  Пожалуйста, предоставьте как можно больше информации о дефекте, чтобы помочь нам его исправить.
  
- - type: checkboxes
+- type: checkboxes
  id: reproduction_steps
  attributes:
  label: "Шаги для воспроизведения"
